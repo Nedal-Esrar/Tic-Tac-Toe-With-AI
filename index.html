@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe With AI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div id="game-container">
+      <form action="" id="ai-level-selection">
+        <select name="level" id="levels-drop-list">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+          <option value="unbeatable">Unbeatable</option>
+        </select>
+      </form>
+
+      <div id="player-selection">
+        <button id="x" class="choice-button button">X</button>
+        <button id="o" class="choice-button button">O</button>
+      </div>
+
+      <div id="board">
+        <div class="board-button"><div></div></div>
+        <div class="board-button"><div></div></div>
+        <div class="board-button no-right-border"><div></div></div>
+        <div class="board-button"><div></div></div>
+        <div class="board-button"><div></div></div>
+        <div class="board-button no-right-border"><div></div></div>
+        <div class="board-button no-bottom-border"><div></div></div>
+        <div class="board-button no-bottom-border"><div></div></div>
+        <div class="board-button no-bottom-border no-right-border"><div></div></div>
+      </div>
+
+      <div id="restart">
+        <button id="restart-button" class="button">Restart</button>
+      </div>
+    </div>
+
+    <div id="result-pop-up">
+      <div class="top-text" id="winner-text">The Winner is</div>
+      <div class="sign" id="x-text">X</div>
+      <div class="sign" id="y-text">O</div>
+      <div class="top-text" id="draw-text">It's a Draw</div>
+    </div>
+  </body>
+</html>
