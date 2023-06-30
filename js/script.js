@@ -268,7 +268,7 @@ boardCells.forEach((cell, index) => {
   cell.addEventListener('click', async () => {
     let gameEnds = playHuman(index);
 
-    // console.log(getBoardCells());
+    console.log(getBoardCells());
 
     if (gameEnds) {
       return;
@@ -282,7 +282,7 @@ boardCells.forEach((cell, index) => {
 
     gameEnds = playAI();
 
-    // console.log(getBoardCells());
+    console.log(getBoardCells());
 
     if (gameEnds) {
       return;
