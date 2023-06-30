@@ -68,7 +68,7 @@ const chooseCell = () => {
     emptyCellsIndices.forEach((index) => {
       board.setSignAt(index, AIPlayer.getSign());
 
-      let minimaxResult = minimax(false);
+      let minimaxResult = minimax(true);
 
       if (minimaxResult > bestScore) {
         bestScore = minimaxResult;
@@ -88,7 +88,7 @@ const chooseCell = () => {
 
 const minimax = (isHuman) => {
   if (checkForWin()) {
-    return isHuman ? -1 : 1;
+    return isHuman ? 1 : -1;
   }
 
   if (checkForDraw()) {
@@ -103,7 +103,7 @@ const minimax = (isHuman) => {
     bestScore = Infinity;
 
     emptyCellsIndices.forEach((index) => {
-      board.setSignAt(index, AIPlayer.getSign());
+      board.setSignAt(index, humanPlayer.getSign());
 
       bestScore = Math.min(bestScore, minimax(false));
 
@@ -113,7 +113,7 @@ const minimax = (isHuman) => {
     bestScore = -Infinity;
 
     emptyCellsIndices.forEach((index) => {
-      board.setSignAt(index, humanPlayer.getSign());
+      board.setSignAt(index, AIPlayer.getSign());
 
       bestScore = Math.max(bestScore, minimax(true));
 
